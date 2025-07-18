@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum - Alchemy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <style>
+        /* ...existing body and main-content styles from about.html... */
+
+        .forum-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .new-topic-btn {
+            background: #2563eb;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .forum-topics {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .topic-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .topic-icon {
+            width: 40px;
+            height: 40px;
+            background: #ebf8ff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2563eb;
+            margin-right: 1rem;
+        }
+
+        .topic-content {
+            flex: 1;
+        }
+
+        .topic-title {
+            font-weight: 500;
+            color: #2d3748;
+            margin-bottom: 0.25rem;
+        }
+
+        .topic-meta {
+            font-size: 0.875rem;
+            color: #718096;
+        }
+    </style>
+</head>
+<body>
+    <!-- Include Sidebar (same as about.html) -->
+    <div id="sidebar" class="sidebar">
+        <!-- ...existing sidebar code from about.html... -->
+    </div>
+
+    <main class="main-content">
+        <div class="forum-header">
+            <h1>Engineering Forum</h1>
+            <a href="#" class="new-topic-btn">
+                <i class="fas fa-plus"></i>
+                <span>New Topic</span>
+            </a>
+        </div>
+        <div class="forum-topics">
+            <div class="topic-item">
+                <div class="topic-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="topic-content">
+                    <h3 class="topic-title">Circuit Design Best Practices</h3>
+                    <div class="topic-meta">
+                        <span>Started by John Doe</span> • 
+                        <span>15 replies</span> • 
+                        <span>2 hours ago</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more topic items as needed -->
+        </div>
+    </main>
+
+    <!-- ...existing script from about.html... -->
+</body>
+</html>

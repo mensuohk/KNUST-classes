@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshops - Alchemy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <style>
+        /* ...existing body and main-content styles from about.html... */
+
+        .workshops-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .workshop-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .workshop-image {
+            height: 160px;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .workshop-content {
+            padding: 1.5rem;
+        }
+
+        .workshop-date {
+            color: #718096;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .workshop-title {
+            font-size: 1.25rem;
+            color: #2d3748;
+            margin-bottom: 1rem;
+        }
+
+        .workshop-details {
+            display: flex;
+            align-items: center;
+            color: #718096;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Include Sidebar (same as about.html) -->
+    <div id="sidebar" class="sidebar">
+        <!-- ...existing sidebar code from about.html... -->
+    </div>
+
+    <main class="main-content">
+        <div class="workshops-grid">
+            <div class="workshop-card">
+                <div class="workshop-image">
+                    <i class="fas fa-microchip fa-3x"></i>
+                </div>
+                <div class="workshop-content">
+                    <div class="workshop-date">Mar 15, 2024</div>
+                    <h3 class="workshop-title">Introduction to Microcontrollers</h3>
+                    <div class="workshop-details">
+                        <i class="fas fa-clock mr-2"></i>
+                        <span>2 hours • Beginner Level</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more workshop cards as needed -->
+        </div>
+    </main>
+
+    <!-- ...existing script from about.html... -->
+</body>
+</html>

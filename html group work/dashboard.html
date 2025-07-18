@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Sidebar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="dashboard.css">
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: sans-serif;
+      display: flex;
+      min-height: 100vh;
+      height: 100%;
+      background: #f3f4f6;
+    }
+  </style>
+</head>
+<body>
+  <div id="sidebar" class="sidebar">
+    <!-- Toggle Button -->
+    <button id="toggle-btn" class="toggle-btn" aria-label="Collapse sidebar">
+      <i id="toggle-icon" class="fas fa-chevron-left"></i>
+    </button>
+    
+    <!-- Header -->
+    <div class="sidebar-header">
+      <h1 id="sidebar-title">
+        <span class="full-title">Alchemy</span>
+        <span class="short-title">A</span>
+      </h1>
+    </div>
+    
+    <!-- Teacher Profile -->
+    <div class="teacher-profile">
+      <div class="avatar">SN</div>
+      <div class="profile-info">
+        <p class="name">Student Name</p>
+        <p class="dept">Engineering Department</p>
+      </div>
+    </div>
+    
+    <!-- Menu Items -->
+        <!-- Menu Items -->
+        <nav class="menu">
+          <ul>
+            <li>
+              <a href="/profile" class="active">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="/workshops">
+                <i class="fas fa-tools"></i>
+                <span>Workshops</span>
+              </a>
+            </li>
+            <li>
+              <a href="/forum">
+                <i class="fas fa-comments"></i>
+                <span>Forum</span>
+              </a>
+            </li>
+            <li>
+              <a href="/about">
+                <i class="fas fa-info-circle"></i>
+                <span>About Us</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+    
+    <!-- Footer -->
+    <div class="sidebar-footer">
+      <a href="/logout">
+        <!-- Sign Out Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+          <polyline points="16 17 21 12 16 7"></polyline>
+          <line x1="21" y1="12" x2="9" y2="12"></line>
+        </svg>
+        <span>Sign out</span>
+      </a>
+    </div>
+  </div>
+  
+  <script>
+    // Toggle sidebar collapse/expand
+    const sidebar = document.getElementById("sidebar");
+    const toggleBtn = document.getElementById("toggle-btn");
+    const toggleIcon = document.getElementById("toggle-icon");
+    let collapsed = false;
+
+    toggleBtn.addEventListener("click", () => {
+      collapsed = !collapsed;
+      sidebar.classList.toggle("collapsed", collapsed);
+      // Update the icon and aria-label based on state
+      const icon = document.getElementById("toggle-icon");
+      if (collapsed) {
+        icon.classList.remove("fa-chevron-left");
+        icon.classList.add("fa-chevron-right");
+        toggleBtn.setAttribute("aria-label", "Expand sidebar");
+      } else {
+        icon.classList.remove("fa-chevron-right");
+        icon.classList.add("fa-chevron-left");
+        toggleBtn.setAttribute("aria-label", "Collapse sidebar");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Alchemy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="about.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            display: flex;
+            min-height: 100vh;
+            background: #f3f4f6;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 2rem;
+            margin-left: 1rem;
+        }
+
+        .about-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2d3748;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            color: #4a5568;
+            margin: 1.5rem 0 1rem;
+        }
+
+        p {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <!-- Include dashboard styles -->
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- Include Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <!-- Toggle Button -->
+        <button id="toggle-btn" class="toggle-btn" aria-label="Collapse sidebar">
+            <i id="toggle-icon" class="fas fa-chevron-left"></i>
+        </button>
+        
+        <!-- Header -->
+        <div class="sidebar-header">
+            <h1 id="sidebar-title">
+                <span class="full-title">Alchemy</span>
+                <span class="short-title">A</span>
+            </h1>
+        </div>
+        
+        <!-- Teacher Profile -->
+        <div class="teacher-profile">
+            <div class="avatar">SN</div>
+            <div class="profile-info">
+                <p class="name">Student Name</p>
+                <p class="dept">Engineering Department</p>
+            </div>
+        </div>
+        
+        <!-- Menu Items -->
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="/profile">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/workshops">
+                        <i class="fas fa-tools"></i>
+                        <span>Workshops</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/forum">
+                        <i class="fas fa-comments"></i>
+                        <span>Forum</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/about" class="active">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About Us</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Footer -->
+        <div class="sidebar-footer">
+            <a href="/logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Sign out</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="about-container">
+            <header class="about-header">
+                <h1>About Alchemy</h1>
+            </header>
+    
+            <div class="about-content">
+                <div class="about-section">
+                    <h2>Our Story</h2>
+                    <p>Alchemy was born from a vision to revolutionize the world of Artificial Intelligence. Founded by innovators who dared to challenge the status quo, Alchemy's mission is to harness the transformative power of AI to drive positive change.</p>
+                    <p>Through research and collaboration, Alchemy pushes boundaries and shapes a brighter future where AI elevates human potential. The journey has just begun, and the possibilities are endless.</p>
+                </div>
+    
+                <div class="about-section">
+                    <h2>What We Do</h2>
+                    <p>Alchemy was established to democratize access to AI, foster responsible innovation, and unlock human potential. By developing inclusive, transparent, and cutting-edge AI solutions, Alchemy aims to drive transformative impact across industries and societies.</p>
+                </div>
+            </div>
+    
+            <section class="mission-vision">
+                <h2>Our Mission & Vision</h2>
+                <p id="mission-statement">Alchemy's mission is to harness AI for social good. Its vision is a future where AI empowers humanity, bridging gaps and unlocking potential. Alchemy strives to make AI a force for positive transformation.</p>
+            </section>
+    
+            <div class="about-content">
+                <div class="about-section">
+                    <h2>Our Values</h2>
+                    <p>Alchemy's core values are innovation, inclusivity, and integrity. The company prioritizes collaboration, transparency, and accountability, fostering a culture of trust, creativity, and continuous learning.</p>
+                </div>
+    
+                <div class="about-section">
+                    <h2>Our Future</h2>
+                    <p>Alchemy is poised for exponential growth, driven by innovation and social impact. Its future roadmap includes advancing AI research, launching transformative products, and expanding global partnerships to harness AI for the greater good.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Toggle sidebar collapse/expand
+        const sidebar = document.getElementById("sidebar");
+        const toggleBtn = document.getElementById("toggle-btn");
+        const toggleIcon = document.getElementById("toggle-icon");
+        let collapsed = false;
+
+        toggleBtn.addEventListener("click", () => {
+            collapsed = !collapsed;
+            sidebar.classList.toggle("collapsed", collapsed);
+            if (collapsed) {
+                toggleIcon.classList.remove("fa-chevron-left");
+                toggleIcon.classList.add("fa-chevron-right");
+                toggleBtn.setAttribute("aria-label", "Expand sidebar");
+            } else {
+                toggleIcon.classList.remove("fa-chevron-right");
+                toggleIcon.classList.add("fa-chevron-left");
+                toggleBtn.setAttribute("aria-label", "Collapse sidebar");
+            }
+        });
+    </script>
+</body>
+</html>

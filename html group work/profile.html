@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/png" href="img/82310291-letter-a-style-typography-design-template-removebg-preview.png">
+    <title>Alchemy Profile</title>
+</head>
+<body>
+    <div class="main-container">
+        <header id="header">
+            <div>
+                <nav>
+                    <ul class="topbar">
+                        <li>
+                            <svg class="topbar-icon"><use xlink:href="./img/sprite.svg#icon-menu"></use></svg>                          
+                        </li>
+                        <div class="user-nav">
+                            <li>
+                                <a href="mail.html">
+                                    <svg class="topbar-icon">
+                                    <use xlink:href="./img/sprite.svg#icon-mail"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <svg class="topbar-icon">
+                                <use xlink:href="./img/sprite.svg#icon-bell"></use>
+                                </svg> 
+                            </li>
+                            <li>
+                                <a href="settings.html">
+                                    <svg class="topbar-icon">
+                                    <use xlink:href="./img/sprite.svg#icon-cog"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="profile.html">
+                                    <svg class="topbar-icon">
+                                    <use xlink:href="./img/sprite.svg#icon-user"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <div class="sign-in">
+                                <li>
+                                    <a href="frontend.html">
+                                        <span class="sign-in-text">LOG-IN</span>
+                                        <svg class="topbar-icon">
+                                        <use xlink:href="./img/sprite.svg#icon-login"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </div>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="nav-panel">
+            <div class="logo">
+                <a href="dashboard.html" title="Alchemy">
+                    <img class="logo" src="./img/WhatsApp Image 2025-03-20 at 19.32.41_f07d682a.jpg" alt="Alchemy">
+                </a>
+            </div>
+            <nav class="sidenav">
+                <ul>
+                    <li class="sidenav-item">
+                        <a href="dashboard.html" class="sidenav-link">
+                        <svg class="sidenav-icon"><use xlink:href="./img/sprite.svg#icon-home"></use></svg>
+                        <span>Dashboard</span>
+                    </a></li>
+                    <li class="sidenav-item"><a href="my-workshops.html" class="sidenav-link">
+                        <svg class="sidenav-icon"><use xlink:href="./img/sprite.svg#icon-briefcase"></use></svg>
+                        <span>My Workshops</span>
+                    </a></li>
+                    <li class="sidenav-item"><a href="browse-workshops.html" class="sidenav-link">
+                        <svg class="sidenav-icon"><use xlink:href="./img/sprite.svg#icon-search"></use></svg>
+                        <span>Browse Workshops</span>
+                    </a></li>
+                    <li class="sidenav-item"><a href="calendar.html" class="sidenav-link">
+                        <svg class="sidenav-icon"><use xlink:href="./img/sprite.svg#icon-calendar"></use></svg>
+                        <span>Calendar</span>
+                    </a></li>
+                    <li class="sidenav-item"><a href="profile.html" class="sidenav-link active">
+                        <svg class="sidenav-icon"><use xlink:href="./img/sprite.svg#icon-user"></use></svg>
+                        <span>Profile</span>
+                    </a></li>
+                    <li class="sidenav-item"><a href="settings.html" class="sidenav-link">
+                        <svg class="sidenav-icon"><use xlink:href="./img/sprite.svg#icon-cog"></use></svg>
+                        <span>Settings</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <main>
+            <div class="main-content">
+                <header class="dash-head">
+                    <svg class="dash-icon">
+                        <use xlink:href="./img/sprite.svg#icon-user"></use>
+                    </svg>
+                    <p>My Profile</p>
+                </header>
+                
+                <div class="profile-container">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <img src="./img/default-avatar.png" alt="Profile Picture">
+                            <button class="change-avatar-btn">Change Picture</button>
+                        </div>
+                        <div class="profile-info">
+                            <h2>John Doe</h2>
+                            <p>Member since: January 2024</p>
+                            <p>Email: john.doe@example.com</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-details">
+                        <section class="profile-section">
+                            <h3>Personal Information</h3>
+                            <form class="profile-form">
+                                <div class="form-group">
+                                    <label for="fullName">Full Name</label>
+                                    <input type="text" id="fullName" value="John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" value="john.doe@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" id="phone" value="+1 234 567 8900">
+                                </div>
+                                <div class="form-group">
+                                    <label for="bio">Bio</label>
+                                    <textarea id="bio">Enthusiastic learner passionate about workshops and skill development.</textarea>
+                                </div>
+                                <button type="submit" class="save-btn">Save Changes</button>
+                            </form>
+                        </section>
+
+                        <section class="profile-section">
+                            <h3>Workshop Statistics</h3>
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <h4>Completed Workshops</h4>
+                                    <p>12</p>
+                                </div>
+                                <div class="stat-card">
+                                    <h4>Upcoming Workshops</h4>
+                                    <p>3</p>
+                                </div>
+                                <div class="stat-card">
+                                    <h4>Certificates Earned</h4>
+                                    <p>8</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

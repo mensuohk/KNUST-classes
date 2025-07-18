@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue Themed Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Styling */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #81c3d7, #3a7ca5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Form Container */
+    .form-container {
+      background:#e3f2fd;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 450px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Form Title */
+    .form-title {
+      font-size: 28px;
+      color: #003366;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+
+    /* Input Fields */
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      color: #003366;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #B3D9FF;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #003366;
+      background: #F0F7FF;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #0073e6;
+      box-shadow: 0 0 5px rgba(0, 115, 230, 0.5);
+      background: #ffffff;
+    }
+
+    /* Gender Field */
+    .form-group.gender-group {
+      display: flex;
+      flex-direction: column;
+    }
+    .form-group.gender-group label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group.gender-group input[type="radio"]  {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.5rem;
+    }
+    
+    .form-group.terms-group input[type="checkbox"]  {
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.5rem;
+    }
+
+    /* Terms and Conditions */
+    .form-group.terms-group {
+      display: flex;
+      align-items: center;
+    }
+
+    .form-group.terms-group label {
+      margin-right: 0.5rem;
+    }
+
+    .form-group.terms-group input {
+      margin-left: 0.5rem;
+    }
+
+    /* Submit Button */
+    .submit-button {
+      width: 100%;
+      padding: 0.75rem;
+      background: #03045e;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .submit-button:hover {
+      background: 023e8a;
+      transform: translateY(-2px);
+    }
+
+    .submit-button:active {
+      transform: translateY(0);
+    }
+
+    /* Link Styling */
+    .form-footer {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 14px;
+      color: #003366;
+    }
+
+    .form-footer a {
+      color: #0073e6;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .form-footer a:hover {
+      color: #005bb5;
+      text-decoration: underline;
+    }
+
+    /* Hidden Form */
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <!-- Sign In Form -->
+    <div id="sign-in-form">
+      <h1 class="form-title">LOG IN</h1>
+      <form action="#" method="POST">
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <!-- Password Field -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <!-- Submit Button -->
+        <button type="submit" class="submit-button" onclick="window.location.href='profile.html';">Sign In</button>
+      </form>
+      <!-- Footer -->
+      <div class="form-footer">
+        <p>Don't have an account? <a href="register.html">Create Account</a></p>
+      </div>
+    </div>
+  </div>  
+  </body>
+  <script>
+    function showCreateAccountForm() {
+      document.getElementById('sign-in-form').classList.add('hidden');
+      document.getElementById('create-account-form').classList.remove('hidden');
+      
+    }
+  </script>
+</html>
+
